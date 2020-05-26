@@ -1,0 +1,607 @@
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Error 
+
+  Class 'Aws\Sqs\SqsClient' not found
+
+  at /var/www/LARAVEL/dka-develop_queue.loc/vendor/laravel/framework/src/Illuminate/Queue/Connectors/SqsConnector.php:26
+    22|             $config['credentials'] = Arr::only($config, ['key', 'secret', 'token']);
+    23|         }
+    24| 
+    25|         return new SqsQueue(
+  > 26|             new SqsClient($config), $config['queue'], $config['prefix'] ?? '', $config['suffix'] ?? ''
+    27|         );
+    28|     }
+    29| 
+    30|     /**
+
+      [2m+19 vendor frames [22m
+  20  /var/www/LARAVEL/dka-develop_queue.loc/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+[2020-05-01 16:44:00][18] Processing: App\Jobs\PrepareJob
+[2020-05-01 16:44:00][19] Processing: App\Jobs\PrepareJob
+[2020-05-01 16:44:01][19] Failed:     App\Jobs\PrepareJob
+[2020-05-01 16:44:01][20] Processing: App\Jobs\SendMessage
+[2020-05-01 16:44:01][20] Processed:  App\Jobs\SendMessage
+[2020-05-01 16:44:01][21] Processing: App\Jobs\SendMessage
+[2020-05-01 16:44:01][21] Processed:  App\Jobs\SendMessage
+[2020-05-01 16:44:01][22] Processing: App\Jobs\SendMessage
+[2020-05-01 16:44:01][22] Processed:  App\Jobs\SendMessage
+[2020-05-01 16:44:01][23] Processing: App\Jobs\SendMessage
+[2020-05-01 16:44:01][23] Processed:  App\Jobs\SendMessage
+[2020-05-01 16:44:01][24] Processing: App\Jobs\PrepareJob
+[2020-05-01 16:44:01][25] Processing: App\Jobs\PrepareJob
+[2020-05-01 16:44:01][25] Failed:     App\Jobs\PrepareJob
+[2020-05-01 16:44:01][26] Processing: App\Jobs\PrepareJob
+[2020-05-01 16:44:01][26] Failed:     App\Jobs\PrepareJob
+[2020-05-01 16:44:01][27] Processing: App\Jobs\PrepareJob
+[2020-05-01 16:44:01][27] Failed:     App\Jobs\PrepareJob
+[2020-05-01 16:44:01][28] Processing: App\Jobs\PrepareJob
+[2020-05-01 16:44:01][28] Failed:     App\Jobs\PrepareJob
+[2020-05-01 16:44:01][29] Processing: App\Jobs\PrepareJob
+[2020-05-01 16:44:01][29] Failed:     App\Jobs\PrepareJob

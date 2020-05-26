@@ -1,7 +1,7 @@
 LARAVEL - QUEUE
 ======= 
 
-####[Laravel queues learn to use and what it is | Laravel Queues | Laravel Jobs 	(6:30)]( https://www.youtube.com/watch?v=DFCH1n3oOnA&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=2&t=9s )
+[Laravel queues learn to use and what it is | Laravel Queues | Laravel Jobs 	(6:30)]( https://www.youtube.com/watch?v=DFCH1n3oOnA&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=2&t=9s )
 		
 - laravel jobs
 - laravel очереди
@@ -75,6 +75,7 @@ Now we’ll look at another way to store tasks, and show how to configure task s
 This manual is suitable for Ubuntu operating systems.
 
 * ***Redis:***
+
 Install redis server:
 
 	sudo apt install redis-server
@@ -92,13 +93,13 @@ Install redis server:
 - if "PONG" answered, then the server is working. :)
 
 
-*** Ubuntu Laravel project setup ***
+***Ubuntu Laravel project setup***
 
-1. - access to files in folder:
+1. access to files in folder:
 
 	sudo chmod -R 777 /var/www/LARAVEL/dka-develop_queue.loc
 
-2. - creating files of the new virtual host, creating the file of the first virtual host.
+2. creating files of the new virtual host, creating the file of the first virtual host.
 Let's start by copying the file for the first domain:
 	
 	sudo cp /etc/apache2/sites-available/test.loc.conf /etc/apache2/sites-available//var/www/LARAVEL/dka-develop_queue.loc.conf
@@ -107,13 +108,14 @@ Let's start by copying the file for the first domain:
 	
 	sudo nano /etc/apache2/sites-available/dka-develop_queue.loc.conf
 		
-4. - configure on /etc/apache2/sites-available/dka-develop_queue.loc
+4. configure on /etc/apache2/sites-available/dka-develop_queue.loc
+
 ```
 Ctrl + O
 Enter 
 Ctrl + X
 ```		
-5. - inclusion of new virtual hosts:
+5. inclusion of new virtual hosts:
 		
 	sudo a2ensite dka-develop_queue.loc.conf
 
@@ -130,7 +132,7 @@ This command works the same way, but you may not get the output as when using ot
 
 7. 	`sudo nano /etc/hosts`
 	
-8. - Testing the results, like :)
+8. Testing the results, like :)
 				
 		http://dka-develop_queue.loc		
 				
@@ -158,15 +160,17 @@ Change the driver for the queues to redis:
 
 `QUEUE_DRIVER=redis` 
 
---In Laravel 7.7.1:
+In Laravel 7.7.1:
 
 `QUEUE_CONNECTION=redis`
 
--- In subsequent lessons, the connection type `database` and` redis` will be changed as necessary.
+In subsequent lessons, the connection type `database` and` redis` will be changed as necessary.
 It will be necessary to return again:
 
 `QUEUE_DRIVER | QUEUE_CONNECTION = database`	
+
 OR
+
 `QUEUE_DRIVER | QUEUE_CONNECTION = `redis`
 
 We execute the command to reset the cache of settings and other configuration files.
@@ -178,15 +182,14 @@ We execute the command to reset the cache of settings and other configuration fi
 	netstat -an | grep 6379
 
 
-####useful links:
+#### useful links:
 
 [Error: How to Fix ‘E: Could not get lock /var/lib/dpkg/lock’ Error in Ubuntu Linux]( https://itsfoss.com/could-not-get-lock-error/ )
 
 [Error: cannot allocate memory - proc_open...]( https://www.nicesnippets.com/blog/proc-open-fork-failed-cannot-allocate-memory-laravel-ubuntu )
 	
 
-
-####[#1 Laravel queues create a task and send it to the queue | Laravel Queues | Laravel Jobs (5:16)]( https://www.youtube.com/watch?v=ZG1Gs6_7p28&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=2 )
+[#1 Laravel queues create a task and send it to the queue | Laravel Queues | Laravel Jobs (5:16)]( https://www.youtube.com/watch?v=ZG1Gs6_7p28&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=2 )
 	
 We go further and learn to create tasks and send them to the queue for execution.
 
@@ -213,30 +216,30 @@ must be one. - Remember about the scope, in fact these are different variables. 
 `$this->message->data`. To demonstrate the job, we use the Laravel helper function, `info()`. And we put the data that we transfer to her in the Laravel log file. -> `info ($this-> message)`; - After we wrote our task class, we can send it
 queued for execution using the `dispatch()` helper method;
 
-***! DO NOT write logic in routes!***
+***! DO NOT write logic in routes !***
 
 - The arguments passed to the sending method will be passed to the job designer.
 Actions:
 - edit the code ...
 
 [(2:50)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=170 )
+
 Now we launch the development server:
+
 1.
 	php artisan serve
 
 And run the queue handler:
 
-2.
-In another terminal:
+2. In another terminal:
 
 	php artisan queue:work
 	
 - This team may be familiar to you from our course on creating real-time applications.
 
-3.
-Open this route in the browser:
+3. Open this route in the browser:
 
-	`127.0.0.1:8000`
+	127.0.0.1:8000
 
 [Error: LogicException : Please make sure the PHP Redis extension is installed and enabled.]( https://github.com/TypiCMS/Base/issues/158 )
  
@@ -248,7 +251,7 @@ Open this route in the browser:
 3. Save your changes.
 4. Restart the server and your application
 
-- check in routes / web phpinfo (); where is php.ini
+- check in `routes/web` phpinfo(); where is php.ini
 
 - add library	
 
@@ -263,25 +266,24 @@ Restart:
 1.
 	php artisan serve
 
-2.
-In another terminal:
+2. In another terminal:
 
 	php artisan queue:work
 
 3. In the browser:
 
-	`127.0.0.1:8000`
+	127.0.0.1:8000
 
-4. We look at the message in
-	`storage/logs/laravel.log`
+4. We look at the message in `storage/logs/laravel.log`
 
 [(3:21)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=201 )
 Open the console and see that our task has been started and completed:
 
 `...Processing...` 
+
 `...Processed...`
  
-Stop the queue handler Ctrl + C and see in what form the tasks are stored in the database.
+Stop the queue handler `Ctrl + C` and see in what form the tasks are stored in the database.
 
 - Created by dka_develop_queue utf8mb4_general_ci
 
@@ -295,7 +297,9 @@ Stop the queue handler Ctrl + C and see in what form the tasks are stored in the
 	
 [(3:24)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=204 ) 
 As you can see, our task is serialized into a row with additional data and added to the table field. - When it comes time for execution, it is removed and runs ALL of the instructions that are indicated.
+
 [(3:45)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=225 ) 
+
 Start the queue back:
 
 1.
@@ -304,6 +308,7 @@ Start the queue back:
 2. In another terminal:
 
 	cd /var/www/LARAVEL/dka-develop_queue.loc
+
 	php artisan queue:work
 
 3. In the browser:
@@ -313,10 +318,14 @@ Start the queue back:
 - AND ALL that requires execution has been processed (- The entry in the table will disappear).
 
 `.env`
+
 `! QUEUE_DRIVER | QUEUE_CONNECTION = database !`
 
-(3:55) Let's add a delay to the job. Add 10 minutes to the current time:
-  - Add to `routes/web`:
+[(3:55)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=235 )
+
+Let's add a delay to the job. Add 10 minutes to the current time:
+
+- Add to `routes/web`:
  
 ```php 
 App\Jobs\SendMessage::dispatch("TEST MESSAGE")->delay(now()->addMinutes(10));
@@ -324,11 +333,11 @@ App\Jobs\SendMessage::dispatch("TEST MESSAGE")->delay(now()->addMinutes(10));
 	
 We launch in the browser:
 
-	`127.0.0.1:8000` (- Refresh)
+	127.0.0.1:8000 (- Refresh)
 
 [(4:14)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=254 )
 
-![screenshot of sample](https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/1(4.14).png)
+![screenshot of sample](https://github.com/mslobodyanyuk/tree/master/dka-develop_queue/public/images/1(4.14).png)
 
 We look in the database `available_at` - this field is responsible for the moment when this task can already be completed. While the current time has NOT reached this mark - the task is skipped. If even the execution time has passed, let's say an hour has passed instead of 10 minutes.
 and you turned off the queue handler, and then turned it on. - It will EVERYTHING be fulfilled, since from now on it is available for fulfillment.
@@ -338,7 +347,7 @@ and you turned off the queue handler, and then turned it on. - It will EVERYTHIN
  _Example_ - it is now 8 o’clock, 8:00 - You have postponed the task for 10 minutes. + 0:10 - accordingly at 8:10 it can already be executed. - You turned off the handler and turned it on at 8:30. - The task EVERYTHING will be fulfilled equally.
 8:30 - This is just the time when the task can be processed.
 	
-####useful links:
+#### useful links:
 
 [Error: LogicException : Please make sure the PHP Redis extension is installed and enabled.]( https://github.com/TypiCMS/Base/issues/158 )
 	
@@ -347,7 +356,7 @@ and you turned off the queue handler, and then turned it on. - It will EVERYTHIN
 [Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO). DB_HOST set to localhost]( https://stackoverflow.com/questions/58233866/sqlstatehy000-1045-access-denied-for-user-rootlocalhost-using-password )
 
 
-####[#2 Laravel queues: cascade of tasks and the number of attempts to complete | Laravel Queues | Laravel Jobs (5:25)]( https://www.youtube.com/watch?v=2KGXg03ryPI&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=3 )
+[#2 Laravel queues: cascade of tasks and the number of attempts to complete | Laravel Queues | Laravel Jobs (5:25)]( https://www.youtube.com/watch?v=2KGXg03ryPI&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=3 )
 
 We go further and learn to create tasks and send them to the queue for execution.
 

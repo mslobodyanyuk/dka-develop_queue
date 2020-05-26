@@ -189,6 +189,7 @@ We execute the command to reset the cache of settings and other configuration fi
 [Error: cannot allocate memory - proc_open...]( https://www.nicesnippets.com/blog/proc-open-fork-failed-cannot-allocate-memory-laravel-ubuntu )
 	
 
+
 [#1 Laravel queues create a task and send it to the queue | Laravel Queues | Laravel Jobs (5:16)]( https://www.youtube.com/watch?v=ZG1Gs6_7p28&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=2 )
 	
 We go further and learn to create tasks and send them to the queue for execution.
@@ -337,8 +338,8 @@ We launch in the browser:
 
 [(4:14)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=254 )
 
-![screenshot of sample](https://github.com/mslobodyanyuk/tree/master/dka-develop_queue/public/images/1(4.14).png)
-
+![screenshot of sample]( https://github.com/mslobodyanyuk/dka-develop_queue/blob/master/public/images/1(4.14).png )
+                        <https://github.com/mslobodyanyuk/dka-develop_queue/blob/master/public/images/1(4.14).png>
 We look in the database `available_at` - this field is responsible for the moment when this task can already be completed. While the current time has NOT reached this mark - the task is skipped. If even the execution time has passed, let's say an hour has passed instead of 10 minutes.
 and you turned off the queue handler, and then turned it on. - It will EVERYTHING be fulfilled, since from now on it is available for fulfillment.
 + label conversion site `unixtimestamps.com`.

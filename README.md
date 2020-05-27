@@ -25,7 +25,6 @@ Queues, in fact, are deferred tasks with which you can defer the execution of ta
 Queues can be used for any time-consuming tasks.
 
 [(2:14)]( https://youtu.be/DFCH1n3oOnA?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=134 )
-
 For example, you need to parse a page. - You send the task to the queue and can continue to work on the site. Answer inquiries, generate reports. Once the server has processed the task -
 you send a notification through the same events and Laravel echo. - That the task is completed - you can check.
 
@@ -37,9 +36,9 @@ Define - database | redis.
 
 * ***Actions:***
 
-    //go to the project folder, like: cd /var/www/LARAVEL/dka-develop_queue.loc
+    `//go to the project folder, like: cd /var/www/LARAVEL/dka-develop_queue.loc`
 	
-	composer create-project --prefer-dist laravel/laravel 
+	`composer create-project --prefer-dist laravel/laravel`
 																																																											
 [(3:30)]( https://youtu.be/DFCH1n3oOnA?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=210 )
 This command will create the necessary migration files.
@@ -124,11 +123,11 @@ Ctrl + X
 		
 6. After completion, you need to restart Apache for the changes to take effect: In other documentation sources you can see an example of using the service command:
 
-		`sudo service apache2 restart`
+		sudo service apache2 restart
 		
 This command works the same way, but you may not get the output as when using other systems, because now this command is a wrapper around systemctl.
 		
-		`sudo systemctl restart apache2`
+		sudo systemctl restart apache2
 
 7. 	`sudo nano /etc/hosts`
 	
@@ -164,14 +163,14 @@ In Laravel 7.7.1:
 
 `QUEUE_CONNECTION=redis`
 
-In subsequent lessons, the connection type `database` and` redis` will be changed as necessary.
+In subsequent lessons, the connection type `database` and `redis` will be changed as necessary.
 It will be necessary to return again:
 
 `QUEUE_DRIVER | QUEUE_CONNECTION = database`	
 
 OR
 
-`QUEUE_DRIVER | QUEUE_CONNECTION = `redis`
+`QUEUE_DRIVER | QUEUE_CONNECTION = redis`
 
 We execute the command to reset the cache of settings and other configuration files.
 
@@ -187,7 +186,8 @@ We execute the command to reset the cache of settings and other configuration fi
 [Error: How to Fix ‘E: Could not get lock /var/lib/dpkg/lock’ Error in Ubuntu Linux]( https://itsfoss.com/could-not-get-lock-error/ )
 
 [Error: cannot allocate memory - proc_open...]( https://www.nicesnippets.com/blog/proc-open-fork-failed-cannot-allocate-memory-laravel-ubuntu )
-	
+
+---	
 
 
 [#1 Laravel queues create a task and send it to the queue | Laravel Queues | Laravel Jobs (5:16)]( https://www.youtube.com/watch?v=ZG1Gs6_7p28&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=2 )
@@ -206,7 +206,7 @@ We create our first task, use the command for this:
 	
 	php artisan make:job SendMessage
 
-SendMessage - the name of the class for our job. ALL classes with tasks are located in the `app / Jobs` directory - if this folder is NOT present - it will be created after the first execution of the task creation command.
+SendMessage - the name of the class for our job. ALL classes with tasks are located in the `app/Jobs` directory - if this folder is NOT present - it will be created after the first execution of the task creation command.
 This is our first class that implements the queue interface. We can pass data for processing to the class constructor. If we are talking about user registration, then the data may be an e-mail to which you must send
 a message about successful registration and the username to which the message will be addressed. The handle () method will just perform the task that we will write to it. For example, here you can write a user message sending code
 using the data that came in the constructor of the class.
@@ -214,7 +214,7 @@ using the data that came in the constructor of the class.
 [(1:25)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=85 )
 Let's complete our first task in line. - Create a class member with the identifier protected $ message; - assign a NAME - it should convey meaning as the name of a variable. Next, the constructor takes one parameter, the parameter is NOT
 must be one. - Remember about the scope, in fact these are different variables. - Now in order to assign a variable to the class member that came to the constructor, use the link to the current object of the class $ this and the NAME of the class member WITHOUT the "$" sign (- property).
-`$this->message->data`. To demonstrate the job, we use the Laravel helper function, `info()`. And we put the data that we transfer to her in the Laravel log file. -> `info ($this-> message)`; - After we wrote our task class, we can send it
+`$this->message->data`. To demonstrate the job, we use the Laravel helper function, `info()`. And we put the data that we transfer to her in the Laravel log file. -> `info ($this-> message);` - After we wrote our task class, we can send it
 queued for execution using the `dispatch()` helper method;
 
 ***! DO NOT write logic in routes !***
@@ -224,7 +224,6 @@ Actions:
 - edit the code ...
 
 [(2:50)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=170 )
-
 Now we launch the development server:
 
 1.
@@ -301,7 +300,6 @@ Stop the queue handler `Ctrl + C` and see in what form the tasks are stored in t
 As you can see, our task is serialized into a row with additional data and added to the table field. - When it comes time for execution, it is removed and runs ALL of the instructions that are indicated.
 
 [(3:45)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=225 ) 
-
 Start the queue back:
 
 1.
@@ -358,6 +356,7 @@ and you turned off the queue handler, and then turned it on. - It will EVERYTHIN
 	
 [Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO). DB_HOST set to localhost]( https://stackoverflow.com/questions/58233866/sqlstatehy000-1045-access-denied-for-user-rootlocalhost-using-password )
 
+---
 
 [#2 Laravel queues: cascade of tasks and the number of attempts to complete | Laravel Queues | Laravel Jobs (5:25)]( https://www.youtube.com/watch?v=2KGXg03ryPI&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=3 )
 
@@ -418,7 +417,7 @@ IF the first Task is NOT completed, the subsequent such will NOT be completed.
 
 - We look at the handler - we see in what sequence the tasks were completed. - The first task was completed that calls 2 others, according to the indices in the array ([0,1]):
 
-![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/2 2(3.10).png )
+![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/2_2(3.10).png )
 
 `routes/web:`
 ```php	
@@ -446,7 +445,7 @@ info($this->message);
 		
 [(3:40)]( https://youtu.be/2KGXg03ryPI?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=220 )
 
-![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/2 3(3.40).png )
+![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/2_3(3.40).png )
 
  - Again we start the task in the queue:
 
@@ -464,8 +463,8 @@ job code.
 	
 - Let's run it. - You see, he reports an ERROR and then does NOT try to execute it anymore. - Open the database and find that this Task is NOT. - He will try to execute it. And after the 3rd time, he just threw it out.
 
-[(4:35)]( https://youtu.be/2KGXg03ryPI?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=275 )
- - Now let's indicate the number of attempts in the code. - We go into the task and write a public member of the class, the name is the same as when called in the terminal.
+
+ - [(4:35)]( https://youtu.be/2KGXg03ryPI?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=275 ) Now let's indicate the number of attempts in the code. - We go into the task and write a public member of the class, the name is the same as when called in the terminal.
 `Jobs/PrepareJob.php`:
 	
 ```php	
@@ -476,7 +475,8 @@ public $tries = 3;
 	
 	`php artisan queue:work`
 	
-[(4:53)]( https://youtu.be/2KGXg03ryPI?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=293 ) - Refreshing the page - see, exactly 3 attempts. Last time, it flew out right away, as there the counter of attempts had long exceeded 3.
+ - [(4:53)]( https://youtu.be/2KGXg03ryPI?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=293 ) Refreshing the page - see, exactly 3 attempts. Last time, it flew out right away, as there the counter of attempts had long exceeded 3.
+---
 
 
 [#3 Laravel Queues: Unsuccessful Jobs | Laravel Queues | Laravel Jobs (5:19)]( https://www.youtube.com/watch?v=bucNubYHQRY&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=4 )
@@ -541,7 +541,7 @@ various compounds may be used. - One, for example, can be in the database, and t
 
 
 [(2:18)]( https://youtu.be/bucNubYHQRY?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=138 )
-You can use the method in this task( `Jobs\PrepareJob` ) to handle the Failed job completion. Connect the namespace use Exception; Remove "\" from `handle()` before the connected Exception class;
+You can use the method in this task( `Jobs\PrepareJob` ) to handle the Failed job completion. Connect the namespace use Exception; Remove " \ " from `handle()` before the connected Exception class;
 We write a comment for the method, its name must be exactly the same, and as a parameter it accepts our exception. Here you can send a message to the client that the task has failed and the text ERRORS.
 We will output the message to the log file. We use a predefined constant that outputs the NAME of our class + "." to combine with a string. Reduce the number of attempts to one ( `public $ tries = 1;` ).
 	
@@ -611,6 +611,7 @@ Again. View all missions that failed.
 
 - There are no tasks with errors.
 
+---
 
 
 [#4 Laravel queues: autostart after server reboot, process crashes and on vps | Supervisor (6:54)]( https://www.youtube.com/watch?v=eqKEbJzkpGc&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=5 )
@@ -630,7 +631,6 @@ user can control connected processes on UNIX systems. The tool creates processes
 `Linux systems | Mac | FreeBSD` - the only difference is the Installation Manager and the Storage location for config files. For demonstration we use `UBUNTU`.
 
 [(1:09)]( https://youtu.be/eqKEbJzkpGc?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=69 )
-
  Use the command to install Supervisor:
 	
 	sudo apt install supervisor
@@ -681,8 +681,7 @@ Now we need to add our configuration file to the monitor. We execute the command
 
 	sudo supervisorctl reread
 	
-[(4:38)]( https://youtu.be/eqKEbJzkpGc?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=278 )
- - The directory has been re-read and our configuration is available.
+- [(4:38)]( https://youtu.be/eqKEbJzkpGc?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=278 ) The directory has been re-read and our configuration is available.
 
 	`sudo supervisorctl update`
 
@@ -719,7 +718,7 @@ an exception will be thrown which will try to be executed 1 time - the code take
 [(6:10)]( https://youtu.be/eqKEbJzkpGc?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=370 )
 How to stop a process that is running in Supervisor. We use this command:
 	
-	`sudo supervisorctl stop laravel-worker`
+	sudo supervisorctl stop laravel-worker
 	
 - stopped
 Check:
@@ -744,6 +743,8 @@ With official documentation:
  
 <https://laravel.com/docs/5.6/queues>
 
+---
+
 
 [#5 Laravel Horizon what it is and how to configure and use it | Laravel Queues | Laravel Jobs (5:10)]( https://www.youtube.com/watch?v=HhhzBtoVXR0&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=6 )
 	
@@ -758,7 +759,7 @@ Such as job bandwidth / lead time AND job failure. Essentially, it replaces the 
 
 	//cd /var/www/LARAVEL/dka-develop_queue.loc
 	
-![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/5 1(0.27).png )	
+![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/5_1(0.27).png )	
 
 [(0:41)]( https://youtu.be/HhhzBtoVXR0?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=41 )
 The main thing to remember is that this package will work ONLY if you use a redis server as a driver and storage.
@@ -784,7 +785,6 @@ We create a configuration file.
 	php artisan config:cache
 
 [(1:35)]( https://youtu.be/HhhzBtoVXR0?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=95 )
-
 Let's open the file with the configuration of this package - `config/horizon.php`( `'use' => 'default'` ) - this is the NAME for connecting to the redis server, this package will store the information necessary for it
 functioning - Unsuccessful tasks, performance indicators, and other information. Remember that we are not limited to one redis server. IF you set up queues especially without changing anything, then DO NOT touch either.
 Next, prefix is ​​used to store the package data. IF he does NOT conflict with anything, also DO NOT change it. ( `'waits'` ) - this is the queue threshold in seconds for each type of connection before the event is triggered.
@@ -829,7 +829,7 @@ By default, the panel is available at the following address.
 [(4:30)]( https://youtu.be/HhhzBtoVXR0?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=270 )
 In this panel, you can see the execution of the task ( `Metrics` ) - categories of queues, ( `Recent` ) - recent, and Failed ( `Failed` ) - which we can run again ( `Retry` ).
 
-![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/5 6(4.48).png )
+![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/5_6(4.48).png )
 
 #### useful links:
 

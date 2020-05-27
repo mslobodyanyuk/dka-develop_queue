@@ -97,16 +97,16 @@ Install redis server:
 
 1. access to files in folder:
 
-	sudo chmod -R 777 /var/www/LARAVEL/dka-develop_queue.loc
+	`sudo chmod -R 777 /var/www/LARAVEL/dka-develop_queue.loc`
 
 2. creating files of the new virtual host, creating the file of the first virtual host.
 Let's start by copying the file for the first domain:
 	
-	sudo cp /etc/apache2/sites-available/test.loc.conf /etc/apache2/sites-available//var/www/LARAVEL/dka-develop_queue.loc.conf
+	`sudo cp /etc/apache2/sites-available/test.loc.conf /etc/apache2/sites-available//var/www/LARAVEL/dka-develop_queue.loc.conf`
 	
 3. Open a new file in the editor with root privileges:
 	
-	sudo nano /etc/apache2/sites-available/dka-develop_queue.loc.conf
+	`sudo nano /etc/apache2/sites-available/dka-develop_queue.loc.conf`
 		
 4. configure on /etc/apache2/sites-available/dka-develop_queue.loc
 
@@ -117,18 +117,18 @@ Ctrl + X
 ```		
 5. inclusion of new virtual hosts:
 		
-	sudo a2ensite dka-develop_queue.loc.conf
+	`sudo a2ensite dka-develop_queue.loc.conf`
 
 // (Next, deactivate the default site 000-default.conf :) - Most likely only 1 time, the first time you use it.
 			sudo a2dissite 000-default.conf					
 		
 6. After completion, you need to restart Apache for the changes to take effect: In other documentation sources you can see an example of using the service command:
 
-		sudo service apache2 restart
+		`sudo service apache2 restart`
 		
 This command works the same way, but you may not get the output as when using other systems, because now this command is a wrapper around systemctl.
 		
-		sudo systemctl restart apache2
+		`sudo systemctl restart apache2`
 
 7. 	`sudo nano /etc/hosts`
 	
@@ -228,19 +228,19 @@ Actions:
 Now we launch the development server:
 
 1.
-	php artisan serve
+	`php artisan serve`
 
 And run the queue handler:
 
 2. In another terminal:
 
-	php artisan queue:work
+	`php artisan queue:work`
 	
 - This team may be familiar to you from our course on creating real-time applications.
 
 3. Open this route in the browser:
 
-	127.0.0.1:8000
+	`127.0.0.1:8000`
 
 [Error: LogicException : Please make sure the PHP Redis extension is installed and enabled.]( https://github.com/TypiCMS/Base/issues/158 )
  
@@ -256,7 +256,7 @@ And run the queue handler:
 
 - add library	
 
-	sudo apt-get install php-redis	
+	`sudo apt-get install php-redis`	
 	
 [Error: Unable to install Redis.]( https://qna.habr.com/q/556049 )
 
@@ -265,15 +265,16 @@ And run the queue handler:
 Restart:
 
 1.
-	php artisan serve
+	
+    `php artisan serve`
 
 2. In another terminal:
 
-	php artisan queue:work
+	`php artisan queue:work`
 
 3. In the browser:
 
-	127.0.0.1:8000
+	`127.0.0.1:8000`
 
 4. We look at the message in `storage/logs/laravel.log`
 
@@ -288,9 +289,9 @@ Stop the queue handler `Ctrl + C` and see in what form the tasks are stored in t
 
 - Created by dka_develop_queue utf8mb4_general_ci
 
-	php artisan queue:table
+	`php artisan queue:table`
 
-	php artisan migrate
+	`php artisan migrate`
 
 [Error: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO). DB_HOST set to localhost](https://stackoverflow.com/questions/58233866/sqlstatehy000-1045-access-denied-for-user-rootlocalhost-using-password)
 		
@@ -304,13 +305,13 @@ As you can see, our task is serialized into a row with additional data and added
 Start the queue back:
 
 1.
-	php artisan serve
+	`php artisan serve`
 
 2. In another terminal:
 
-	cd /var/www/LARAVEL/dka-develop_queue.loc
+	`cd /var/www/LARAVEL/dka-develop_queue.loc`
 
-	php artisan queue:work
+	`php artisan queue:work`
 
 3. In the browser:
 	
@@ -339,10 +340,11 @@ We launch in the browser:
 [(4:14)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=254 )
 
 ![screenshot of sample]( https://github.com/mslobodyanyuk/dka-develop_queue/blob/master/public/images/1(4.14).png )
-                        <https://github.com/mslobodyanyuk/dka-develop_queue/blob/master/public/images/1(4.14).png>
+                        
 We look in the database `available_at` - this field is responsible for the moment when this task can already be completed. While the current time has NOT reached this mark - the task is skipped. If even the execution time has passed, let's say an hour has passed instead of 10 minutes.
 and you turned off the queue handler, and then turned it on. - It will EVERYTHING be fulfilled, since from now on it is available for fulfillment.
-+ label conversion site `unixtimestamps.com`.
+
++ time label conversion site `unixtimestamps.com`
 
 [(4:35)]( https://youtu.be/ZG1Gs6_7p28?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=275 )
  _Example_ - it is now 8 o’clock, 8:00 - You have postponed the task for 10 minutes. + 0:10 - accordingly at 8:10 it can already be executed. - You turned off the handler and turned it on at 8:30. - The task EVERYTHING will be fulfilled equally.
@@ -388,13 +390,13 @@ Let’s create for our Assignment which in the last video we will create 2 more 
 		
 - Of course, you should NOT give such names for the classes of the assignment - this is too much level of abstraction. And 2nd Task:
 
-	php artisan make:job PublishJob
+	`php artisan make:job PublishJob`
 	
 - We do this by analogy with the 1st task, they will take one parameter in the constructor AND output a message to the log file (- `storage/logs/laravel.log` )
 
 [(2:10)]( https://youtu.be/2KGXg03ryPI?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=130 ) - Goes to the route - Delete the execution delay And before calling the Task we add a method that takes an array of events as a parameter.
 
-***! DO NOT write logic in routes!***
+***! DO NOT write logic in routes !***
 
 IF the first Task is NOT completed, the subsequent such will NOT be completed.
 
@@ -402,12 +404,13 @@ IF the first Task is NOT completed, the subsequent such will NOT be completed.
 
 1.
 	
-	php artisan serve
+	`php artisan serve`
 
 2. In another terminal:
 	
-	//cd /var/www/LARAVEL/dka-develop_queue.loc
-	php artisan queue:work
+	`//cd /var/www/LARAVEL/dka-develop_queue.loc`
+	
+	`php artisan queue:work`
 
 3. In the browser:
 
@@ -415,7 +418,7 @@ IF the first Task is NOT completed, the subsequent such will NOT be completed.
 
 - We look at the handler - we see in what sequence the tasks were completed. - The first task was completed that calls 2 others, according to the indices in the array ([0,1]):
 
-![screenshot of sample](https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/2 2(3.10).png)
+![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/2 2(3.10).png )
 
 `routes/web:`
 ```php	
@@ -430,20 +433,24 @@ Route::get('/', function () {
 });
 ```
 
-[(3:25)]( https://youtu.be/2KGXg03ryPI?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=205 ) Let's stop completing the quest in quest 2 in the chain.
-  - To emulate the error, we will throw an exception, Jobs / PrepareJob.php - we look at the code in the handle () method:  
+[(3:25)]( https://youtu.be/2KGXg03ryPI?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=205 ) 
+
+Let's stop completing the quest in quest 2 in the chain.
+  - To emulate the error, we will throw an exception, `Jobs/PrepareJob.php` - we look at the code in the `handle()` method:  
+
 ```php 
 throw new \Exception("Our Error", 101);
 info($this->message);
 ```		
-	`Ctrl + C`
+	Ctrl + C
 		
 [(3:40)]( https://youtu.be/2KGXg03ryPI?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=220 )
-![screenshot of sample](https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/2 3(3.40).png)
+
+![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/2 3(3.40).png )
 
  - Again we start the task in the queue:
 
-	php artisan queue:work
+	`php artisan queue:work`
 
 (- execution will run), stop the handler `Ctrl + C`. - You see, the first task is completed, the second one is trying to execute, and the 3rd one is NOT executed, because the 2nd one generates an error.
 
@@ -467,12 +474,12 @@ public $tries = 3;
 	
 - Now run WITHOUT the indication of attempts:
 	
-	php artisan queue:work
+	`php artisan queue:work`
 	
 [(4:53)]( https://youtu.be/2KGXg03ryPI?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=293 ) - Refreshing the page - see, exactly 3 attempts. Last time, it flew out right away, as there the counter of attempts had long exceeded 3.
 
 
-####[#3 Laravel Queues: Unsuccessful Jobs | Laravel Queues | Laravel Jobs (5:19)]( https://www.youtube.com/watch?v=bucNubYHQRY&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=4 )
+[#3 Laravel Queues: Unsuccessful Jobs | Laravel Queues | Laravel Jobs (5:19)]( https://www.youtube.com/watch?v=bucNubYHQRY&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=4 )
 
 Commands:
 
@@ -510,6 +517,7 @@ _- Already had a Jobs table, Laravel 7.7_
 	//php artisan queue:failed-table 
 	
 - issued an ERROR:
+
 _A CreateFailedJobsTable class already exists._
 		
 	//php artisan migrate
@@ -523,12 +531,13 @@ _A CreateFailedJobsTable class already exists._
 
 In the browser, refresh the page:
 	
-	`127.0.0.1:8000`
+	127.0.0.1:8000
 
 - We look at the Jobs table - it is NOT in the "queue" AND it is displayed in the table of tasks that failed to execute ( `failed_jobs` ) - This table is slightly different. The connection is indicated here. - Yes, for each task
 various compounds may be used. - One, for example, can be in the database, and the other is a redis server ( `connection` is a column ), then our task ( `payload` ), message with ERROR ( `exception` ), date and time ( `failed_at` )
  - For unsuccessful ERRORS to be placed in a separate table, they should indicate the number of attempts to execute ( `public $ tries = 3;` OR, the handler should start with this parameter `php artisan queue: work --tries = 3` ).
-![screenshot of sample](https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/3(1.57).png)
+
+![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/3(1.57).png ) 
 
 
 [(2:18)]( https://youtu.be/bucNubYHQRY?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=138 )
@@ -559,7 +568,7 @@ Run the handler:
 
 In the browser, refresh the page:
 	
-	`127.0.0.1:8000`
+	127.0.0.1:8000
 
 Open the log file. You see, our action is displayed with the class name and text.
 ```
@@ -604,7 +613,7 @@ Again. View all missions that failed.
 
 
 
-####[#4 Laravel queues: autostart after server reboot, process crashes and on vps | Supervisor (6:54)]( https://www.youtube.com/watch?v=eqKEbJzkpGc&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=5 )
+[#4 Laravel queues: autostart after server reboot, process crashes and on vps | Supervisor (6:54)]( https://www.youtube.com/watch?v=eqKEbJzkpGc&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=5 )
 	
 If you don’t know how to start the queue on the battle server as a process or if the server reboots, we will offer you instructions for solving this problem.
 
@@ -626,7 +635,7 @@ user can control connected processes on UNIX systems. The tool creates processes
 	
 	sudo apt install supervisor
 	
-	`- /etc/supervisor/supervisord.conf`
+	- /etc/supervisor/supervisord.conf
 
 We go under the superuser, otherwise we will NOT have access to edit directories:
 	
@@ -635,7 +644,7 @@ We go under the superuser, otherwise we will NOT have access to edit directories
 [(1:41)]( https://youtu.be/eqKEbJzkpGc?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=101 )
 The configuration files are located on this path:
 	
-	`/etc/supervisor/conf.d/*.conf`
+	/etc/supervisor/conf.d/*.conf
 	
 - Your own files will be located here. The official documentation says that the file must be created in this directory:
 	
@@ -675,64 +684,68 @@ Now we need to add our configuration file to the monitor. We execute the command
 [(4:38)]( https://youtu.be/eqKEbJzkpGc?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=278 )
  - The directory has been re-read and our configuration is available.
 
-	sudo supervisorctl update
+	`sudo supervisorctl update`
 
 - Updating - the process has been added.
 
-	sudo supervisorctl start laravel-worker
+	`sudo supervisorctl start laravel-worker`
 
 - Run our configuration - appeared worker.log, in the root.
 [(5:00)]( https://youtu.be/eqKEbJzkpGc?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=300 )
 Check running processes:
 
-	ps ax | grep artisan 
+	`ps ax | grep artisan` 
 	
-![screenshot of sample](https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/4(5.10).png)	
+![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/4(5.10).png )	
 
 - Great, our queue handler is launched in the directory with our project.
+
 [(5:15)]( https://youtu.be/eqKEbJzkpGc?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=315 )
  - Let's check how it works. We launch the development server for the project that we created in previous releases. - Separately, the handler does NOT start as it is already running using Supervisor (s)
 In the new terminal:
 
-	//cd /var/www/LARAVEL/dka-develop_queue.loc
+	`//cd /var/www/LARAVEL/dka-develop_queue.loc`
 	
-	php artisan serve
+	`php artisan serve`
 
 [(5:30)]( https://youtu.be/eqKEbJzkpGc?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=330 )
 To start the task, you must open the main page:
 
-	 `127.0.0.1:8000`
+	 127.0.0.1:8000
 
 - Let's open our project in an editor (- for example phpStorm), a file with routes - routes / web.php. - When you start this route, a cascade of tasks starts. And in this assignment (- PrepareJob)
 an exception will be thrown which will try to be executed 1 time - the code takes precedence (- not 3 times), then it will be moved to the table with unsuccessful tasks.
+
 [(6:10)]( https://youtu.be/eqKEbJzkpGc?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=370 )
 How to stop a process that is running in Supervisor. We use this command:
 	
-	sudo supervisorctl stop laravel-worker
+	`sudo supervisorctl stop laravel-worker`
 	
 - stopped
 Check:
 
-	ps ax | grep artisan 
+	`ps ax | grep artisan` 
 	
 - there is NO process, ("artisan serve" is our development server)
 Run again:
 	
-	sudo supervisorctl start laravel-worker
+	`sudo supervisorctl start laravel-worker`
 
 - started
 We check:
 
-	ps ax | grep artisan 
+	`ps ax | grep artisan` 
 
 - the process is visible.
 
-####useful links:
-With official documentation: 
+#### useful links:
+
+With official documentation:
+ 
 <https://laravel.com/docs/5.6/queues>
 
 
-####[#5 Laravel Horizon what it is and how to configure and use it | Laravel Queues | Laravel Jobs (5:10)]( https://www.youtube.com/watch?v=HhhzBtoVXR0&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=6 )
+[#5 Laravel Horizon what it is and how to configure and use it | Laravel Queues | Laravel Jobs (5:10)]( https://www.youtube.com/watch?v=HhhzBtoVXR0&list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&index=6 )
 	
 Commands:
 	
@@ -745,7 +758,7 @@ Such as job bandwidth / lead time AND job failure. Essentially, it replaces the 
 
 	//cd /var/www/LARAVEL/dka-develop_queue.loc
 	
-![screenshot of sample](https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/5 1(0.27).png)	
+![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/5 1(0.27).png )	
 
 [(0:41)]( https://youtu.be/HhhzBtoVXR0?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=41 )
 The main thing to remember is that this package will work ONLY if you use a redis server as a driver and storage.
@@ -764,7 +777,7 @@ We create a configuration file.
 
 [(1:15)]( https://youtu.be/HhhzBtoVXR0?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=75 )
 `.env` -> Change the driver to redis ( `QUEUE_DRIVER = redis` ) - IF you DON'T know how to install and connect Laravel to the redis server, see this video in the queue playlist.
-! - In Laravel 7.7 ( `QUEUE_CONNECTION = redis` (- instead of database))
+! - In Laravel 7.7 ( `QUEUE_CONNECTION = redis` (- instead of `database` ))
 	
 [(1:30)]( https://youtu.be/HhhzBtoVXR0?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=90 )
 
@@ -774,11 +787,11 @@ We create a configuration file.
 
 Let's open the file with the configuration of this package - `config/horizon.php`( `'use' => 'default'` ) - this is the NAME for connecting to the redis server, this package will store the information necessary for it
 functioning - Unsuccessful tasks, performance indicators, and other information. Remember that we are not limited to one redis server. IF you set up queues especially without changing anything, then DO NOT touch either.
-Next, prefix is ​​used to store the package data. IF he does NOT conflict with anything, also DO NOT change it. ( `'waits' ) - this is the queue threshold in seconds for each type of connection before the event is triggered.
+Next, prefix is ​​used to store the package data. IF he does NOT conflict with anything, also DO NOT change it. ( `'waits'` ) - this is the queue threshold in seconds for each type of connection before the event is triggered.
 ( `'trim'` ) - here you can configure how long in minutes you want the last Failed tasks to be stored. By default, the latest tasks are stored for `1 hour`. And ALL UNSUCCESSFUL - within a week ( `10080` )
 ( `'environments' + 'local'` ) - these are essentially options for working with queues in different states. For example, to work in production, that is, when your application is already used by the user. ( `'tries' => 3` ) - this option is responsible for the quantity
 attempts to complete the task. ( `'processes'` ) - the number of processes. ( `'balance'` ) - is a load balancer. It has `3 states` - `simple | automatic | false`. `simple` - evenly distributes tasks between loads.
-`auto` - adjusts the number of workflows in the queue based on the load. For example, IF the notification queue( `notifications: 1000 render: 0 `) has 1000 jobs waiting, while the rendering queue is empty, this package will allocate more.
+`auto` - adjusts the number of workflows in the queue based on the load. For example, IF the notification queue( `notifications: 1000 render: 0` ) has 1000 jobs waiting, while the rendering queue is empty, this package will allocate more.
 worker in the notification queue until it becomes empty.
 
 [(3:12)]( https://youtu.be/HhhzBtoVXR0?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=192 )
@@ -798,7 +811,7 @@ Launch the development server:
 [(3:54)]( https://youtu.be/HhhzBtoVXR0?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=234 )
 By default, the panel is available at the following address.
 
-	`127.0.0.1:8000/horizon`
+	127.0.0.1:8000/horizon
 
 - Now run the task in the queue:
 	
@@ -816,9 +829,10 @@ By default, the panel is available at the following address.
 [(4:30)]( https://youtu.be/HhhzBtoVXR0?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=270 )
 In this panel, you can see the execution of the task ( `Metrics` ) - categories of queues, ( `Recent` ) - recent, and Failed ( `Failed` ) - which we can run again ( `Retry` ).
 
-![screenshot of sample](https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/5 6(4.48).png)
+![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/5 6(4.48).png )
 
-####useful links:
+#### useful links:
+
 [Error: - proc_open cannot allocate memory]( https://www.nicesnippets.com/blog/proc-open-fork-failed-cannot-allocate-memory-laravel-ubuntu )
 				
 Useful links:

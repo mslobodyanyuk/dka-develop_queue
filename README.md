@@ -417,7 +417,7 @@ IF the first Task is NOT completed, the subsequent such will NOT be completed.
 
 - We look at the handler - we see in what sequence the tasks were completed. - The first task was completed that calls 2 others, according to the indices in the array ([0,1]):
 
-![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/22(3.10).png )
+![screenshot of sample]( https://github.com/mslobodyanyuk/dka-develop_queue/blob/master/public/images/22(3.10).png )
 
 `routes/web:`
 ```php	
@@ -445,7 +445,7 @@ info($this->message);
 		
 [(3:40)]( https://youtu.be/2KGXg03ryPI?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=220 )
 
-![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/23(3.40).png )
+![screenshot of sample]( https://github.com/mslobodyanyuk/dka-develop_queue/blob/master/public/images/23(3.40).png )
 
  - Again we start the task in the queue:
 
@@ -538,7 +538,7 @@ In the browser, refresh the page:
 various compounds may be used. - One, for example, can be in the database, and the other is a redis server ( `connection` is a column ), then our task ( `payload` ), message with ERROR ( `exception` ), date and time ( `failed_at` )
  - For unsuccessful ERRORS to be placed in a separate table, they should indicate the number of attempts to execute ( `public $ tries = 3;` OR, the handler should start with this parameter `php artisan queue: work --tries = 3` ).
 
-![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/3(1.57).png ) 
+![screenshot of sample]( https://github.com/mslobodyanyuk/dka-develop_queue/blob/master/public/images/3(1.57).png ) 
 
 [(2:18)]( https://youtu.be/bucNubYHQRY?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=138 )
 You can use the method in this task( `Jobs\PrepareJob` ) to handle the Failed job completion. Connect the namespace use Exception; Remove " \ " from `handle()` before the connected Exception class;
@@ -695,7 +695,7 @@ Check running processes:
 
 	`ps ax | grep artisan` 
 	
-![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/4(5.10).png )	
+![screenshot of sample]( https://github.com/mslobodyanyuk/dka-develop_queue/blob/master/public/images/4(5.10).png )	
 
 - Great, our queue handler is launched in the directory with our project.
 
@@ -756,7 +756,7 @@ Such as job bandwidth / lead time AND job failure. Essentially, it replaces the 
 
 	//cd /var/www/LARAVEL/dka-develop_queue.loc
 	
-![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/51(0.27).png )	
+![screenshot of sample]( https://github.com/mslobodyanyuk/dka-develop_queue/blob/master/public/images/51(0.27).png )	
 
 [(0:41)]( https://youtu.be/HhhzBtoVXR0?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=41 )
 The main thing to remember is that this package will work ONLY if you use a redis server as a driver and storage.
@@ -826,7 +826,7 @@ By default, the panel is available at the following address.
 [(4:30)]( https://youtu.be/HhhzBtoVXR0?list=PLD5U-C5KK50Xo5mG_JPzyjIv-d3R7gqGH&t=270 )
 In this panel, you can see the execution of the task ( `Metrics` ) - categories of queues, ( `Recent` ) - recent, and Failed ( `Failed` ) - which we can run again ( `Retry` ).
 
-![screenshot of sample]( https://github.com/mslobodyanyuk/blob/master/dka-develop_queue.loc/public/images/56(4.48).png )
+![screenshot of sample]( https://github.com/mslobodyanyuk/dka-develop_queue/blob/master/public/images/56(4.48).png )
 
 #### useful links:
 
